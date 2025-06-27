@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+
+<head>
+    <title>Order Summary</title>
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="Keywords"
+        content="Online Shopping in India,online Shopping store,Online Shopping Site,Buy Online,Shop Online,Fliipkart">
+    <meta name="Description"
+        content="India's biggest online store for Mobiles, Fashion (Clothes/Shoes), Electronics, Home Appliances, Books, Jewelry, Home, Furniture, Sporting goods, Beauty &amp; Personal Care, Grocery and more! Find the largest selection from all brands at the lowest prices in India. Payment options - COD, EMI, Credit card, Debit card &amp; more.">
+    <meta property="og:title" content="We are Here To Help You">
+    <meta name="theme-color" content="#2874f0" id="themeColor">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,user-scalable=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+
+<body class="expansion-alids-init" cz-shortcut-listen="true">
+    <div id="container" style="overflow:hidden">
+        <div style="height:100%" data-reactroot="">
+            <style>
+                .form-control {
+                    margin-bottom: 16px;
+                }
+
+                .card {
+                    --bs-border-color-translucent: rgba(0, 0, 0, 0) !important;
+                }
+
+                .card.max-height {
+                    height: calc(100vh - 42px) !important;
+                }
+
+                .card-footer {
+                    background: none !important;
+                    border-top: none !important;
+                    position: absolute;
+                    bottom: 0;
+                    width: 90%;
+                    left: 5%;
+                }
+            </style>
+            <div class="container-fluid p-3 header-container">
+                <div class="row header">
+                    <div class="col-1">
+                        <div class="menu-icon" id="back_btn">
+                            <svg width="19" height="16" viewBox="0 0 19 16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.556 7.847H1M7.45 1L1 7.877l6.45 6.817" stroke="#000" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <div class="menu-logo">
+                            <h4 class="mb-0 mt-1 ms-2">Order Summary</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="_1fhgRH max-height mb-70">
+                <div class="card pt-1 mb-1">
+                    <div class="progress-box mb-0">
+                        <img class="w-100" src="assets/images/process2.png">
+                    </div>
+                </div>
+                <div class="card px-3 py-4 mb-2">
+                    <h3>Delivered to:</h3>
+                    <div class="address-div mt-2">
+                        <h4 class="customer-name" id="customer-name"></h4>
+                        <div class="customer-address" id="customer-address"></div>
+                        <div class="customer-city" id="customer-city"></div>
+                        <div class="customer-state" id="customer-state"></div>
+                        <div class="customer-pin" id="customer-pin"></div>
+                        <div class="customer-mobile" id="customer-mobile"></div>
+                    </div>
+                </div>
+                <div class="card px-3 py-4 mb-2">
+                    <ul class="list-group list-group-flush" id="deals">
+                        <li class="list-group-item px-0" data-timer="2000">
+                            <div class="flex recommended-product">
+                                <img src="" id="item_image" alt="Product Image" style="width:100px;height:auto;">
+                                <div class="description">
+                                    <div class="product-title mb-1" id="product-title"></div>
+                                    <div class="product-detail mb-1" id="product-detail"></div>
+                                    <img src="" width="77px">
+                                </div>
+                            </div>
+                            <div class="flex recommended-product mt-3">
+                                <div class="timer qty mx-4">
+                                    Qty: <span id="qty">1</span>
+                                </div>
+                                <div class="description">
+                                    <div class="price flex">
+                                        <span class="discount" id="discount"></span>
+                                        <span class="strike mrp" id="mrp"></span>
+                                        <span class="selling_price" id="selling_price"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card px-3 py-4 mb-2" id="price-detail">
+                    <h3>Price Details</h3>
+                    <div class="price-detail-div mt-2">
+                        <div class="product-price-list my-3">
+                            <span class="title">Price (1 item)</span>
+                            <span class="data mrp me-0 td-none" id="price-detail-mrp">₹3564</span>
+                        </div>
+                        <div class="product-price-list my-3">
+                            <span class="title">Discount</span>
+                            <span class="data discount-amt text-success" id="price-detail-discount">4%</span>
+                        </div>
+                        <div class="product-price-list my-3">
+                            <span class="title">Delivery Charges</span>
+                            <span class="data text-success" id="delivery-charges">FREE Delivery </span>
+                        </div>
+                        <div class="product-price-list my-3 pt-3 total">
+                            <span class="title">Total Amount </span>
+                            <span class="data selling_price" id="price-detail-total">₹999</span>
+                        </div>
+                        <div class="product-price-list mt-3 pt-3 saved-div">
+                            <span class="text-success">You will save <span class="discount-amt" id="saved-amt"></span>
+                                on this
+                                order</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sefty-banner">
+                    <img class="sefty-img"
+                        src="assets/images/9b179a8a-a0e2-497b-bd44-20aa733dc0ec.webp"
+                        loading="lazy" alt="">
+                    <div dir="auto" class="sefty-txt">Safe and secure payments. Easy returns. 100% Authentic products.
+                    </div>
+                </div>
+                <div class="button-container flex p-3 bg-white">
+                    <div class="col-6 footer-price">
+                        <span class="strike mrp ms-0 mb-1" id="footer-mrp"></span>
+                        <span class="selling_price" id="footer-selling_price"></span>
+                    </div>
+                    <a class="buynow-button product-page-buy col-6 btn-continue text-center" type="button"
+                        id="continue-btn" href="https://github.com/Dhananjay-Pareek/assets/php/payment.php">
+                        Continue
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function getParam(name) {
+            const url = new URL(window.location.href);
+            return url.searchParams.get(name) || '';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get product from localStorage
+            const product = JSON.parse(localStorage.getItem('selectedProduct') || '{}');
+
+            // Product name
+            if(product.name) document.querySelectorAll('#product-title').forEach(e => e.innerText = product.name);
+
+            // Product detail
+            if(product.detail) document.querySelectorAll('#product-detail').forEach(e => e.innerText = product.detail);
+
+            // Product image
+            if(product.image) document.querySelectorAll('#item_image').forEach(e => e.src = product.image);
+
+            // Price
+            if(product.price) {
+                document.querySelectorAll('#selling_price, .selling_price').forEach(e => e.innerText = '₹' + product.price);
+                document.querySelectorAll('#price-detail-total').forEach(e => e.innerText = '₹' + product.price);
+                document.querySelectorAll('#footer-selling_price').forEach(e => e.innerText = '₹' + product.price);
+            }
+
+            // MRP
+            if(product.mrp) {
+                document.querySelectorAll('#mrp, .mrp').forEach(e => e.innerText = '₹' + product.mrp);
+                document.querySelectorAll('#price-detail-mrp').forEach(e => e.innerText = '₹' + product.mrp);
+                document.querySelectorAll('#footer-mrp').forEach(e => e.innerText = '₹' + product.mrp);
+            }
+
+            // Discount
+            if(product.discount) {
+                document.querySelectorAll('#discount, .discount').forEach(e => e.innerText = product.discount);
+                document.querySelectorAll('#price-detail-discount').forEach(e => e.innerText = '-' + product.discount);
+                document.querySelectorAll('#saved-amt').forEach(e => e.innerText = product.discount.replace(/[^\d]/g, ''));
+            }
+
+            // Redirect to payment.php with price as a parameter
+            var price = product.price || 999; // Fallback to 999 if product.price is not available
+            document.getElementById('continue-btn').onclick = function() {
+                window.location.href = 'assets/php/payment.php?price=' + encodeURIComponent(price);
+            };
+        });
+    </script>
+</body>
+
+</html>
